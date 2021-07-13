@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<!-- Enable annotation configuration -->
+	<context:annotation-config />
+	<context:component-scan
+		base-package="kd.bos.pushdata" />
+
+	<!-- JDBC参数配置 -->
+	<!-- <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" 
+		lazy-init="true"> <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" 
+		/> <property name="ignoreResourceNotFound" value="true" /> <property name="locations"> 
+		<list> <value>classpath:/jdbc.properties</value> </list> </property> </bean> -->
+
+
+
+
+	<!-- 数据源配置 -->
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
+		destroy-method="close"> 设置JDBC驱动名称 <property name="driverClassName" value="${jdbc.driver}" 
+		/> 设置JDBC连接URL <property name="url" value="${jdbc.url}" /> 设置数据库用户名 <property 
+		name="username" value="${jdbc.username}" /> 设置数据库密码 <property name="password" 
+		value="${jdbc.password}" /> 设置连接池初始值 <property name="initialSize" value="5" 
+		/> 设置连接池最大值 <property name="maxActive" value="100" /> 设置连接池最小空闲值 <property 
+		name="minIdle" value="20" /> 设置连接池最大空闲值 <property name="maxIdle" value="50" 
+		/> <property name="validationQuery" value="SELECT 1"/> <property name="testOnBorrow" 
+		value="true"/> </bean> -->
+
+	<!-- Hibernate SessionFactory -->
+	<!-- <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource"/> Scan packages for JPA annotations 
+		<property name="packagesToScan" value="com.goldpac.cardbiz.model.base"/> 
+		<property name="hibernateProperties"> <value> 设置数据库方言 hibernate.dialect=${hibernate.dialect} 
+		设置自动创建|更新|验证数据库表结构 hibernate.hbm2ddl.auto=${hibernate.hbm2ddl.auto} 输出SQL语句到控制台 
+		hibernate.show_sql=${hibernate.show_sql} 格式化输出到控制台的SQL语句 hibernate.format_sql=${hibernate.format_sql} 
+		是否开启二级缓存 hibernate.cache.use_second_level_cache=${hibernate.cache.use_second_level_cache} 
+		配置二级缓存产品 hibernate.cache.provider_class=${hibernate.cache.provider_class} 
+		是否开启查询缓存 hibernate.cache.use_query_cache=${hibernate.cache.use_query_cache} 
+		数据库批量查询数 hibernate.jdbc.fetch_size=${hibernate.jdbc.fetch_size} 数据库批量更新数 
+		hibernate.jdbc.batch_size=${hibernate.jdbc.batch_size} hibernate.autoReconnect 
+		= ${hibernate.autoReconnect} </value> </property> <property name="eventListeners"> 
+		<map> <entry key="merge"> <bean class="org.springframework.orm.hibernate3.support.IdTransferringMergeEventListener"/> 
+		</entry> </map> </property> </bean> -->
+
+
+
+	<!-- Transaction support beans -->
+	<!-- <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"> 
+		<property name="sessionFactory" ref="sessionFactory"/> </bean> @Transactional 
+		annotation transaction support <tx:annotation-driven transaction-manager="transactionManager" 
+		proxy-target-class="true"/> -->
+
+</beans>

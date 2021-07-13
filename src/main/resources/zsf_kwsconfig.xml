@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<service name="CardRealService"
+		class="kd.bos.pushdata.webService.CardRealServiceImpl">
+		<method name="getAssetName"></method>
+		<method name="getFre"></method>
+	</service>
+</root>
+

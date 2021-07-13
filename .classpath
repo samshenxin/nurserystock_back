@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/axis-jaxrpc-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/cxf-rt-transports-http-jetty-3.1.5.jar"/>
+	<classpathentry kind="lib" path="lib/cxf-rt-wsdl-3.1.5.jar"/>
+	<classpathentry kind="lib" path="lib/ehcache-core-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/EmpireNetProtocol-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/Goldpac-CardbizCommon.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-3.2.6.ga.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-continuation-9.2.14.v20151106.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-9.2.14.v20151106.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-9.2.14.v20151106.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-security-9.2.14.v20151106.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-server-9.2.14.v20151106.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-servlet-9.2.14.v20151106.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-9.2.14.v20151106.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/mina-core-2.0.9.jar"/>
+	<classpathentry kind="lib" path="lib/NetProtoclo-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/spring-orm-3.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/wsdl4j-1.6.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
