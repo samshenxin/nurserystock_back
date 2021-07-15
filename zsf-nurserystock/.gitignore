@@ -1,0 +1,49 @@
+# maven #
+target
+
+logs
+bin
+build
+.jdy
+.theia
+.gradle
+
+
+# windows #
+Thumbs.db
+
+# Mac #
+.DS_Store
+
+# eclipse #
+.settings
+.project
+.classpath
+.log
+.metadata
+*.class
+*.zip
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/target
+
+
+#Tomcat
+.recommenders
+RemoteSystemsTempFiles
+Servers
+
+# idea
+.idea
+*.iml
+.scannerwork
+/code/blend-service-app/.springBeans
+# bos
+*.app
+*.appx
+*.dymx
+*.dym

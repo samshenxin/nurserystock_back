@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'zsf-nurserystock'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+task sourceJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+ext
+        {
+
+            path = [
+                    trd       : '/jdy/runtime/boslib/lib/trd',
+                    boscorelib: '/jdy/runtime/boslib/lib/bos-corelib',
+                    bos       : '/jdy/runtime/boslib/lib/bos',           
+                    biz       : '/jdy/runtime/boslib/lib/biz'                    
+            ]   
+        }
+
+def trd = ext.path.trd
+def biz = ext.path.biz
+def bos = ext.path.bos
+def boscorelib = ext.path.boscorelib
+
+dependencies {
+    compile fileTree(dir: trd, include: '*.jar')
+    compile fileTree(dir: biz, include: '*.jar')
+    compile fileTree(dir: bos, include: '*.jar')
+    compile fileTree(dir: boscorelib, include: '*.jar')
+}
